@@ -23,6 +23,10 @@ const DUMMY_MEETUPS = [
 function HomePage() {
   return (
     <Fragment>
+      {/* <Layout>
+        <MeetupList meetups={DUMMY_MEETUPS} />
+      </Layout> */}
+
       <MeetupList meetups={DUMMY_MEETUPS} />
     </Fragment>
   );
