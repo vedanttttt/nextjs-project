@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 import { MongoClient } from "mongodb";
+import Head from "next/head";
 
 const DUMMY_MEETUPS = [
   {
@@ -36,6 +37,14 @@ function HomePage(props) {
       </Layout> */}
 
       {/* <MeetupList meetups={loadedMeetups} /> */}
+
+      <Head>
+        <title>Meetups Project</title>
+        <meta
+          name="description"
+          content="Browse a highly active list of Meetups"
+        ></meta>
+      </Head>
 
       <MeetupList meetups={props.meetups} />
     </Fragment>
