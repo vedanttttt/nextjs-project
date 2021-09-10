@@ -2,8 +2,11 @@
 
 import NewMeetupForm from "../../components/meetups/NewMeetupForm";
 import { Fragment } from "react";
+import { useRouter } from "next/dist/client/router";
 
 function NewMeetupPage() {
+  const router = useRouter();
+
   async function addMeetupHandler(enteredMeetupData) {
     //console.log(enteredMeetupData);
 
@@ -18,6 +21,8 @@ function NewMeetupPage() {
     const data = await response.json();
 
     console.log(data);
+
+    router.push("/");
   }
 
   return (
